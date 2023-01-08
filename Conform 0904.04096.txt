@@ -1,0 +1,127 @@
+Start-up ASCOM Device Conformance Checker - Version 6.6.8048.17861 - 64bit mode
+Start-up ASCOM Platform 6.6 6.6.0.3444
+ 
+ 
+ConformanceCheck ASCOM Device Conformance Checker Version 6.6.8048.17861, Build time: 1/13/2022 08:55:24
+ConformanceCheck Running on: ASCOM Platform 6.6 6.6.0.3444
+ 
+ConformanceCheck Driver ProgID: ASCOM.SkyShed_POD_S.Dome
+ 
+Error handling 
+Error number for "Not Implemented" is: 80040400
+Error number for "Invalid Value 1" is: 80040405
+Error number for "Value Not Set 1" is: 80040402
+Error number for "Value Not Set 2" is: 80040403
+Error messages will not be interpreted to infer state.
+ 
+09:04:10.447 Driver Access Checks              OK       
+09:04:11.141 AccessChecks                      OK       Successfully created driver using late binding
+09:04:11.358 AccessChecks                      OK       Successfully connected using late binding
+09:04:11.361 AccessChecks                      INFO     The driver is a .NET object
+09:04:11.364 AccessChecks                      INFO     The AssemblyQualifiedName is: ASCOM.SkyShed_POD_S.Dome, ASCOM.SkyShed_POD_S.Dome, Version=6.5.1.0, Culture
+09:04:11.368 AccessChecks                      INFO     The driver implements interface: ASCOM.DeviceInterface.IDomeV2
+09:04:12.043 AccessChecks                      INFO     Device does not expose interface IDome
+09:04:12.142 AccessChecks                      INFO     Device exposes interface IDomeV2
+09:04:13.489 AccessChecks                      OK       Successfully created driver using driver access toolkit
+09:04:13.585 AccessChecks                      OK       Successfully connected using driver access toolkit
+ 
+Conform is using ASCOM.DriverAccess.Dome to get a Dome object
+09:04:14.941 ConformanceCheck                  OK       Driver instance created successfully
+09:04:15.089 ConformanceCheck                  OK       Connected OK
+ 
+Common Driver Methods 
+09:04:15.144 InterfaceVersion                  OK       2
+09:04:15.184 Connected                         OK       True
+09:04:15.249 Description                       OK       SkyShed POD-S
+09:04:15.294 DriverInfo                        OK       POD-S Dome Control: Driver version: 6.5
+09:04:15.341 DriverVersion                     OK       6.5
+09:04:15.428 Name                              OK       SkyShed POD-S Dome Controller
+09:04:15.465 CommandString                     INFO     Conform cannot test the CommandString method
+09:04:15.469 CommandBlind                      INFO     Conform cannot test the CommandBlind method
+09:04:15.475 CommandBool                       INFO     Conform cannot test the CommandBool method
+09:04:15.480 Action                            INFO     Conform cannot test the Action method
+09:04:16.563 SupportedActions                  OK       Found action: GetAtHome
+09:04:16.567 SupportedActions                  OK       Found action: GetAtPark
+09:04:16.572 SupportedActions                  OK       Found action: GetAzimuth
+09:04:16.577 SupportedActions                  OK       Found action: GetCanFindHome
+09:04:16.581 SupportedActions                  OK       Found action: GetCanPark
+09:04:16.585 SupportedActions                  OK       Found action: GetCanSetAltitude
+09:04:16.591 SupportedActions                  OK       Found action: GetCanSetAzimuth
+09:04:16.595 SupportedActions                  OK       Found action: GetCanSetPark
+09:04:16.603 SupportedActions                  OK       Found action: GetCanSetShutter
+09:04:16.608 SupportedActions                  OK       Found action: GetCanSlave
+09:04:16.614 SupportedActions                  OK       Found action: GetDescription
+09:04:16.620 SupportedActions                  OK       Found action: GetName
+09:04:16.625 SupportedActions                  OK       Found action: GetShutterStatus
+09:04:16.631 SupportedActions                  OK       Found action: GetSlaved
+09:04:16.637 SupportedActions                  OK       Found action: GetSlewing
+09:04:16.643 SupportedActions                  OK       Found action: GetSupportedActions
+09:04:16.649 SupportedActions                  OK       Found action: PutAbortSlew
+09:04:16.654 SupportedActions                  OK       Found action: PutAction
+09:04:16.659 SupportedActions                  OK       Found action: PutCloseShutter
+09:04:16.665 SupportedActions                  OK       Found action: PutCommandBlind
+09:04:16.671 SupportedActions                  OK       Found action: PutCommandBool
+09:04:16.675 SupportedActions                  OK       Found action: PutCommandString
+09:04:16.684 SupportedActions                  OK       Found action: PutFindHome
+09:04:16.689 SupportedActions                  OK       Found action: PutOpenShutter
+09:04:16.694 SupportedActions                  OK       Found action: PutPark
+09:04:16.700 SupportedActions                  OK       Found action: PutSlewToAzimuth
+ 
+Can Properties 
+09:04:16.819 CanFindHome                       OK       True
+09:04:16.885 CanPark                           OK       True
+09:04:16.955 CanSetAltitude                    OK       False
+09:04:17.014 CanSetAzimuth                     OK       True
+09:04:17.074 CanSetPark                        OK       False
+09:04:17.137 CanSetShutter                     OK       True
+09:04:17.194 CanSlave                          OK       False
+09:04:17.273 CanSyncAzimuth                    OK       False
+ 
+Pre-run Checks 
+09:04:17.777 DomeSafety                                 Attempting to open shutter as some tests may fail if it is closed...
+09:04:18.857 DomeSafety                        OK       Shutter status: shutterOpen
+ 
+Properties 
+09:04:18.915 Altitude                          OK       Optional member threw a PropertyNotImplementedException exception.
+09:04:18.982 AtHome                            OK       True
+09:04:19.044 AtPark                            OK       True
+09:04:19.109 Azimuth                           OK       315
+09:04:19.175 ShutterStatus                     OK       shutterOpen
+09:04:19.230 Slaved Read                       OK       False
+09:04:19.274 Slaved Write                      OK       Optional member threw a PropertyNotImplementedException exception.
+09:04:19.340 Slewing                           OK       False
+ 
+Methods 
+09:04:19.470 AbortSlew                         OK       AbortSlew command issued successfully
+09:04:19.508 SlewToAltitude                    OK       Optional member threw a MethodNotImplementedException exception.
+09:04:19.598 SlewToAzimuth 0                   OK       Synchronous slew OK
+09:04:22.902 SlewToAzimuth 45                  OK       Synchronous slew OK
+09:04:26.174 SlewToAzimuth 90                  OK       Synchronous slew OK
+09:04:29.477 SlewToAzimuth 135                 OK       Synchronous slew OK
+09:04:32.776 SlewToAzimuth 180                 OK       Synchronous slew OK
+09:04:36.069 SlewToAzimuth 225                 OK       Synchronous slew OK
+09:04:39.298 SlewToAzimuth 270                 OK       Synchronous slew OK
+09:04:42.502 SlewToAzimuth 315                 OK       Synchronous slew OK
+09:04:45.696 SlewToAzimuth                     OK       COM invalid value exception correctly raised for slew to -10 degrees
+09:04:45.743 SlewToAzimuth                     OK       COM invalid value exception correctly raised for slew to 370 degrees
+09:04:45.820 SyncToAzimuth                     OK       Optional member threw a MethodNotImplementedException exception.
+09:04:46.879 CloseShutter                      OK       Shutter closed successfully
+09:04:54.162 OpenShutter                       OK       Shutter opened successfully
+09:05:00.819 FindHome                          OK       Dome homed successfully
+09:05:05.373 Park                              OK       Dome parked successfully
+09:05:08.594 SetPark                           OK       Optional member threw a MethodNotImplementedException exception.
+ 
+Post-run Checks 
+09:05:08.721 DomeSafety                        INFO     Attempting to close shutter...
+09:05:09.728 DomeSafety                        OK       Shutter successfully closed
+09:05:09.734 DomeSafety                        INFO     Attempting to park dome...
+09:05:10.720 DomeSafety                        OK       Dome successfully parked
+ 
+Conformance test complete 
+ 
+No errors, warnings or issues found: your driver passes ASCOM validation!! 
+ 
+Driver Hash Value: 1B67797B83779C2DA932D4360E4A862C067B11D05C9DB5782838F00091789A4C2267CDF0BC967F9627F21C9B917DA1BD9E98DD1C190EB65444AA1BA11BB0A8CD
+Report Hash Value: A4993E633F8E4741CD164CF3BA1B953EBEFB74F2FEEDAD45976938CE9D87C1F104FFAEDD46F30A529D731F43BE6D40EB9C1DABFC0772C7D694C1DCFCCC43E1C0
+ 
+The validation file is: D:\projects\ASCOM\Logs 2022-12-31\ASCOM.SkyShed_POD_S.Dome.Validation.txt 
